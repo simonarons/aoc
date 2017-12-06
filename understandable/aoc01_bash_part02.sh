@@ -29,3 +29,6 @@ else
 	echo "your input is not just digits, or nothing. not ok."
 fi
 
+# one-liner:
+# digits="$1"; [[ $digits =~ ^[0-9]+$ ]] && { sum=0; pos=0; while [[ $pos -lt ${#digits} ]]; do [[ $pos -lt $((${#digits}/2)) ]] && { [[ ${digits:$pos:1} == ${digits:$(($pos+${#digits}/2)):1} ]] && { let sum=sum+${digits:$pos:1}; } || [[ ${digits:$pos:1} == ${digits:$(($pos-${#digits}/2)):1} ]] && let sum=sum+${digits:$pos:1}; }; let pos++; done; echo "result: $sum"; } || echo "your input is not just digits, or nothing. not ok."
+

@@ -20,3 +20,5 @@ else
 	echo "your input is not just digits, or nothing. not ok."
 fi
 
+# and the mandatory boiled-down hard-to-read optimized one-liner:
+# [[ -f "$1" ]] && { datafile="$1"; sum=0; while read line; do let sum=$(( sum + $(( $(echo $line|sed 's/ /\n/g'|sort -n|tail -n1) - $(echo $line|sed 's/ /\n/g'|sort -n|head -n1) )) )); done < $datafile; echo "$sum"; } || echo -e "usage: $(basename "$0") [datafile]\nwhere datafile is a file. with data."
