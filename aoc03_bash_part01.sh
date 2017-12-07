@@ -18,6 +18,7 @@ else
 		# stuff with a %-sign in it. it looks very professional, if I may say so
 		let steps=$(( offset % (level - 1) ));
 		# and the result, calculated with the speed of lightning, presents itself to the user who now is free to take what action he or she might be willing to take for thiafniodasfnoakdsmf I'm so tired. sorry, night.
+			# note to self: a negative input is not taken care of. fix. lol. as if i would.
 		let result=$(( (level - 1) / 2 + (level / 2) - steps ));
 	echo -e "BAM: result: $result"
 fi
