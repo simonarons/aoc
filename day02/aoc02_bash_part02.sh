@@ -34,6 +34,4 @@ fi
 
 
 # and the one-of-a-kind-liner:
-#[[ -f "$1" ]] && { sum=0; unset a i; while read line; do data=($(echo $line)); for i in ${data[@]}; do for a in ${data[@]}; do [[ $i != $a ]] && { [[ $(( $i % $a )) == 0 ]] && let sum=sum+$(( $i / $a )); }; done; done; done < "$1"; echo $sum; } || echo -e "usage: $(basename "$0") [datafile]\n\twhere [datafile] is a file. with data."
-
-
+# datafile=datafile.day02; sum=0; unset a i; while read line; do data=($(echo $line)); for i in ${data[@]}; do for a in ${data[@]}; do [[ $i != $a ]] && { [[ $(( $i % $a )) == 0 ]] && let sum=sum+$(( $i / $a )); }; done; done; done < "$datafile"; echo $sum;
