@@ -24,4 +24,4 @@ else
 fi
 
 # and a one-liner-kind-of:
-# data=$(<inputdatafile); level=1; tot=1; while [[ $tot -lt $data ]]; do let level=$(( level + 2 )); let tot=$(( level * level )); done; let offset=$(( tot - data )); let steps=$(( offset % (level - 1) )); let result=$(( (level - 1) / 2 + (level / 2) - steps ));
+# data="347991"; level=1; tot=1; while [[ $tot -lt $data ]]; do let level=$(( level + 2 )); let tot=$(( level * level )); done; let offset=$(( tot - data )); let steps=$(( offset % (level - 1) )); let result=$(( (level - 1) / 2 + (level / 2) - steps )); echo $result
