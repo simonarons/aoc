@@ -23,5 +23,5 @@ else
 	echo -e "BAM: result: $result"
 fi
 
-# and a one-liner. just to clarify, this has to be in a file you run as it expects input, otherwise you could remove everything up until "level=1;" and everything after the last "$result;"
-# [[ "$1" ]] && { data="$1"; level=1; tot=1; while [[ $tot -lt $data ]]; do let level=$(( level + 2 )); let tot=$(( level * level )); done; let offset=$(( tot - data )); let steps=$(( offset % (level - 1) )); let result=$(( (level - 1) / 2 + (level / 2) - steps )); echo "BAM: result: $result"; } || echo "no input. usage: as is."
+# and a one-liner-kind-of:
+# data=$(<inputdatafile); level=1; tot=1; while [[ $tot -lt $data ]]; do let level=$(( level + 2 )); let tot=$(( level * level )); done; let offset=$(( tot - data )); let steps=$(( offset % (level - 1) )); let result=$(( (level - 1) / 2 + (level / 2) - steps ));
