@@ -15,6 +15,7 @@ sed "s/\!.//g; s/<[^>]*>//g; s/[^{}]//g" < $datafile | fold -1 | \
 	[[ $line = "{" ]] && { (( ++sum )); (( res+=sum )); } || (( --sum ));
 	# and if we didn't we'll substract 1 from $sum and start over
 	done; 
+
 echo "the total score for ALL the groups is $res"; }
 
 # note to self: learn this stuff with subshells and everything. this time I had to put the loop
