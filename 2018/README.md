@@ -1,0 +1,7 @@
+```bash
+#!/bin/bash
+echo "CgoJG1szN21XaHkgG1s5N21vbiBlYXJ0aBtbMzdtIGRpZCB5b3Ugc3BlbmQgdGltZSBvbiBkZWNv
+ZGluZyB0aGlzPyBTZXJpb3VzbHk/IBtbOTdtQ3V0IHlvdXIgaGFpciAbWzM3bWFuZCAbWzk3bWdl
+dCBhIGpvYhtbMzdtIGZvciBDaHJpc3QncyBzYWtlLgoKCRtbOTdtSmVlei4uLhtbbQ8KCgo=";
+exit 0;
+```
