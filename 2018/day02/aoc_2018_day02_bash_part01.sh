@@ -5,6 +5,9 @@
 # One variable for twos, one for threes.
 nr2=0; nr3=0
 
+# Let's time this son of a gun just to prove how much better bash is on being slower than everything else.
+start=$(date +%s.%N);
+
 # Loop through EVERYTHIIING.
 for id in ${input[@]}; do
     # And for each iteration, check for twos and threes
@@ -19,4 +22,6 @@ for id in ${input[@]}; do
 done
 
 # Then we print the results.
-echo "twos: $nr2, threes: $nr3, checksum $(( nr2 * nr3 ))"
+
+printf "$(tput sgr0)Result: Number of twos: %d, threes: %d, checksum: $(tput setaf 46)%d$(tput sgr0), and it took merely $(tput setaf 255)%s$(tput sgr0)\n" \
+	$nr2 $nr3 "$(( nr2 * nr3 ))" "$(awk '{printf "%.3f seconds!\n", $2 - $1}' <<< "$start $(date +%s.%N)";)"
